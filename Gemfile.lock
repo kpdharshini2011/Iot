@@ -54,6 +54,7 @@ GEM
     minitest (5.5.1)
     multi_json (1.11.0)
     net-http-persistent (2.9.4)
+    pg (0.17.1)
     pubnub (3.7.0)
       eventmachine (~> 1.0)
       json (~> 1.8)
@@ -118,6 +119,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   pubnub
   rack-cors
   rails (= 4.1.8)
