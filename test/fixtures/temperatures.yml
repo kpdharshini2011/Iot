@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temp_time: 2015-03-11 18:19:53
+  celcius: 1.5
+  farenhiet: 1.5
+
+two:
+  temp_time: 2015-03-11 18:19:53
+  celcius: 1.5
+  farenhiet: 1.5
