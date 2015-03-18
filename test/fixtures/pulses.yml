@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pulse_rate: 1
+  pulse_time: 2015-03-18 12:44:17
+
+two:
+  pulse_rate: 1
+  pulse_time: 2015-03-18 12:44:17

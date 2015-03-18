@@ -4,7 +4,21 @@ class TemperaturesController < ApplicationController
   # GET /temperatures
   # GET /temperatures.json
   def index
-    @temperatures = Temperature.all
+    @temperatures = Temperature.all.order('updated_at DESC')
+     respond_to do |format|
+       format.html {  }
+       @temperatures = @temperatures.limit(10)  
+       items = @temperatures.each_with_index.collect do |date, index|
+        {
+        id: date.id,
+        index: index+1,
+        temp_time: date.created_at.strftime("%b %e, %l:%M %p"),
+        celcius: date.celcius,
+        farenhiet: date.farenhiet
+        }     
+      end        
+        format.json { render json: items} 
+     end
   end
 
   # GET /temperatures/1
@@ -42,6 +56,7 @@ class TemperaturesController < ApplicationController
   end
   
   def create_temp
+    p "_____________________________"
     Temperature.create(celcius: params[:Te], farenhiet: params[:Fa])
     render json:{message: "Created Successfully"}, status: :created
   end

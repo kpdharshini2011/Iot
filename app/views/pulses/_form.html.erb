@@ -1,0 +1,25 @@
+<%= form_for(@pulse) do |f| %>
+  <% if @pulse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pulse.errors.count, "error") %> prohibited this pulse from being saved:</h2>
+
+      <ul>
+      <% @pulse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pulse_rate %><br>
+    <%= f.number_field :pulse_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :pulse_time %><br>
+    <%= f.datetime_select :pulse_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

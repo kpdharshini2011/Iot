@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311124953) do
+ActiveRecord::Schema.define(version: 20150318071417) do
+
+  create_table "pulses", force: true do |t|
+    t.integer  "pulse_rate"
+    t.datetime "pulse_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "temperatures", force: true do |t|
     t.datetime "temp_time"

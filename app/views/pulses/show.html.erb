@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pulse rate:</strong>
+  <%= @pulse.pulse_rate %>
+</p>
+
+<p>
+  <strong>Pulse time:</strong>
+  <%= @pulse.pulse_time %>
+</p>
+
+<%= link_to 'Edit', edit_pulse_path(@pulse) %> |
+<%= link_to 'Back', pulses_path %>

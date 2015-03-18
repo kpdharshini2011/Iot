@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+
   resources :temperatures do
     get "create_temp", on: :collection
+  end
+
+  resources :pulses do
+    get "create_pulse", on: :collection
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
